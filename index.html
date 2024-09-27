@@ -1,56 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Saaf</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-   >
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link For FOnt Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/x-icon" href="./src/image.png" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper's JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <title>Brands Fuse</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- logo -->
+
+    <img class="logo" src="./src/image.png" alt="BrandsFuse" />
+
+    <!-- Hamburger for Mobile devices -->
 
     <!-- Navigation Section -->
     <nav>
-        <ul>
-            <li><a href="#brand-story">Brand Story</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#creative-process">Creative Process</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
+      <div class="hamburger" onclick="toggleNavbar()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#brand-story">Brand Story</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#creative-process">Creative Process</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
     </nav>
 
-     <!-- Header Section -->
+    <!-- Header Section -->
     <header>
-        <div class="header-content">
-            <h1>The Spark That Leads The Way</h1>
-            <p>Scroll Down</p>
-        </div
+      <div class="header-content" id="header">
+        <h1>The <span>Spark </span>that<br />Leads the <span>Way</span></h1>
+
+        <div class="sub-header">
+          <p>0324 4862728 <br />connect@brandsfuse.com</p>
+          <button href="#contact">
+            <i class="fa fa-plug" aria-hidden="true"></i> with us
+          </button>
+        </div>
+      </div>
+    </header>
 
     <!-- Brand Story Section -->
-    <section id="brand-story">
-        <h2>Our Brand Story</h2>
-        <p>At Brands Fuse, we understand the challenges startups face in navigating the marketing landscape, especially when balancing creativity with budget constraints. Our unique approach combines appealing graphics, compelling content creation, and strategic advertising, all while aligning our success with yours.</p>
-        <p>By minimizing upfront retainers and billing based on sales performance, we foster a partnership built on trust and shared goals. Just like electricity flows seamlessly through a fuse to power devices, we as a fuse combine creativity and strategy to energize your brand, ensuring that every campaign not only resonates but also drives tangible results. Together, we ignite growth and transform visions into reality.</p>
+
+    <section id="brand-story" class="brand-story">
+      <h2>Our Brand <span>Story</span></h2>
+      <div class="brand-story-content">
+        <p class="p1">
+          At Brands Fuse, we understand the challenges startups face in
+          navigating the marketing landscape, especially when balancing
+          creativity with budget constraints. Our unique approach combines
+          appealing graphics, compelling content creation, and strategic
+          advertising, all while aligning our success with yours.
+        </p>
+        <p class="p2">
+          By minimizing upfront retainers and billing based on sales
+          performance, we foster a partnership built on trust and shared goals.
+          Just like electricity flows seamlessly through a fuse to power
+          devices, we as a fuse combine creativity and strategy to energize your
+          brand, ensuring that every campaign not only resonates but also drives
+          tangible results. Together, we ignite growth and transform visions
+          into reality.
+        </p>
+        <div class="p3">
+          <img src="./src/brandstory.png" alt="brand story" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section-->
+    <section id="services" class="services">
+      <h2>Services <span> Brands Fuse </span>Provides</h2>
+      <div class="services-container">
+        <div class="service">
+          <img src="icons/website-icon.png" alt="Website Design" />
+          <h3>Website Design & Development</h3>
+        </div>
+        <div class="service">
+          <img src="icons/wedding-photography.png" alt="Photography" />
+          <h3>Photography & Videography</h3>
+        </div>
+        <div class="service">
+          <img src="icons/branding.png" alt="Brand Identity" />
+          <h3>Brand Identity</h3>
+        </div>
+
+        <div class="service">
+          <img src="icons/strategy.png" alt="Brand Strategy" />
+          <h3>Brand Strategy</h3>
+        </div>
+
+        <div class="service">
+          <img src="icons/copywriting.png" alt="Copywriting" />
+          <h3>Copywriting & Content Creation</h3>
+        </div>
+
+        <div class="service">
+          <img src="icons/design-thinking.png" alt="Creative Designing" />
+          <h3>Creative Designing</h3>
+        </div>
+        <div class="service">
+          <img src="icons/social-marketing.png" alt="Social Media Management" />
+          <h3>Social Media Management</h3>
+        </div>
+        <div class="service">
+          <img src="icons/data-visualization.png" alt="Performance Marketing" />
+          <h3>Performance Marketing</h3>
+        </div>
+      </div>
+      <img class="flower" src="./src/flower.png" alt="flower icon" />
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+      <h2>Our <span>Portfolio</span></h2>
+      <div class="portfolio-container swiper-container">
+        <div #swiperRef="" class="swiper swiper1">
+          <div class="swiper-wrapper">
+            <div class="portfolio swiper-slide">
+              <h3>BNB Club</h3>
+              <img src="src/bnb.png" alt="bnb club image" />
+              <!-- <a href="bnb.html">
+                <i class="fas fa-arrow-circle-up fa-rotate-by"></i
+              ></a> -->
+            </div>
+            <div class="portfolio swiper-slide">
+              <h3>SK Motors</h3>
+
+              <img src="src/skmotors.png" alt="sk motors image" />
+              <!-- <a href="skmotors.html">
+                <i class="fas fa-arrow-circle-up fa-rotate-by"></i
+              ></a> -->
+            </div>
+            <div class="portfolio swiper-slide">
+              <h3>My Burger</h3>
+              <img src="src/myburger.png" alt="my Burger" />
+              <!-- <a href="myburger.html">
+                <i class="fas fa-arrow-circle-up fa-rotate-by"> </i>
+              </a> -->
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Performance Section -->
+
+    <section class="performance-section" id="performance">
+      <h2>Performance <span> Marketing</span></h2>
+      <div class="performance-container swiper-container">
+        <div #swiperRef="" class="swiper swiper2">
+          <div class="performance-wrapper swiper-wrapper">
+            <div class="performance swiper-slide">
+              <h3>Perfumes Hub</h3>
+              <img src="./src/perfumeshub.png" alt="perfumeshub performance" />
+            </div>
+
+            <div class="performance swiper-slide">
+              <h3>PEC Elections Campaign</h3>
+              <img src="/src/pec.png" alt="pec performance" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Let’s talk!</h2>
-        <p>Email: <a href="mailto:ahsan@brandsfuse.com">ahsan@brandsfuse.com</a></p>
-        <p>Phone: 0324 4862728</p>
-        <p>Email: <a href="mailto:connect@brandsfuse.com">connect@brandsfuse.com</a></p>
+    <section class="contact" id="contact">
+      <h2>Let’s talk!</h2>
+
+      <a href="mailto:ahsan@brandsfuse.com">
+        <div class="mail-wrapper">
+          ahsan@brandsfuse.com
+          <i class="fas fa-arrow-circle-up fa-rotate-by"></i></div
+      ></a>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>2024 © — Made by brandsfuse</p>
-        <p>
-            <a href="https://dribbble.com">Dribbble</a> | 
-            <a href="https://instagram.com">Instagram</a> | 
-            <a href="https://linkedin.com">LinkedIn</a>
-        </p>
+      <p>2024 © — Made by brands fuse</p>
+      <p>
+        <a href="https://dribbble.com">Dribble</a> |
+        <a href="https://instagram.com">Instagram</a> |
+        <a href="https://linkedin.com">LinkedIn</a>
+      </p>
     </footer>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
