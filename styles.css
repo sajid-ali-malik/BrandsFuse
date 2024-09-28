@@ -408,20 +408,23 @@ h3 {
 
 .band-container {
   border: var(--light);
-  padding: 1.5rem;
+  padding: 1.5rem 0px;
   background-color: var(--light);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+
   transform: rotate(-1deg);
 }
 
 .band-line {
   background-color: var(--green);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   color: var(--dark);
-  padding: 1rem 10rem;
+  width: 100%;
+  padding: 1rem 0px;
   font-size: 2.5rem;
-  border-radius: 32px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* Contact Section */
@@ -433,12 +436,27 @@ h3 {
 }
 
 .contact h2 {
-  font-size: 2rem;
+  font-family: "Quanta Grotesk Pro", sans-serif;
+  font-size: 10rem;
   margin-bottom: 20px;
+}
+
+.contact a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--dark);
 }
 
 .contact p {
   font-size: 1.1rem;
+}
+
+.mail-wrapper {
+  display: inline-block;
+  padding: 10px 15px 10px 15px;
+  background-color: #a4e92a;
+  font-size: 1.5rem;
+  border-radius: 10px;
 }
 
 /* Footer Section */
@@ -852,7 +870,6 @@ footer a {
   }
 
   .band-line {
-    /* background-color: var(--green); */
     width: 100%;
     color: var(--dark);
     padding: 0.5rem 0;
